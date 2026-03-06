@@ -34,6 +34,7 @@ def run_experiment(experiment_name, n_groups,  data_module,
     )
     
     sample_data, _ = next(iter(data_module.train_dataloader()))
+    sample_data = model.transform(sample_data)
     sample_shape = sample_data.shape
     result_flops = get_flops(model, sample_shape)
     # result_flops.update({'n_groups': n_groups, 'n_mels': n_mels})
