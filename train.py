@@ -56,7 +56,7 @@ def run_experiment(experiment_name, n_groups,  data_module,
         accelerator="auto",
         devices=1,
         logger=logger,
-        log_every_n_steps=50,
+        log_every_n_steps=5,
         enable_progress_bar=True,
         callbacks=[HyperparameterLogger()]  # Add hyperparameter logging
     )
@@ -128,4 +128,4 @@ if __name__ == "__main__":
     
 
 
-    run_comparison_experiments(dm, n_input=1, n_output=len(dm.labels), max_epochs=2)
+    run_comparison_experiments(dm, n_input=1, n_output=len(dm.labels), max_epochs=6)
