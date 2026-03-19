@@ -9,3 +9,10 @@ thop==0.1.1.post2209072238
 torch==2.1.2+cu121
 torch==1.13.1
 torchaudio==2.1.2+cu121
+
+levenshtein
+jiwer
+datasets
+soundfile
+librosa
+transformers==4.36.2
